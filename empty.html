@@ -215,6 +215,12 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>MySubHistoryList</li>
+
+<li>MySubStoryList</li>
+
+<li>New Tiddler</li>
+
 <li>regex meta-character</li>
 
 </ul>
@@ -9489,8 +9495,8 @@ Error message and password prompt
 <div created="20200217122626432" modified="20200217123018082" title="$:/state/folded/$:/ControlPanel">
 <pre>show</pre>
 </div>
-<div created="20200217122821168" modified="20200217122821168" title="$:/state/folded/regex meta-character">
-<pre>hide</pre>
+<div created="20200217122821168" modified="20200217123138515" title="$:/state/folded/regex meta-character">
+<pre>show</pre>
 </div>
 <div created="20200217121859322" modified="20200217121859322" title="$:/state/showeditpreview">
 <pre>yes</pre>
@@ -9507,7 +9513,7 @@ Error message and password prompt
 <div created="20200217094634145" modified="20200217094634840" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200217123010043" list="$:/ControlPanel [[regex meta-character]]" modified="20200217123016466" title="$:/StoryList">
+<div list="[[New Tiddler]] [[regex meta-character]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9685,6 +9691,51 @@ Error message and password prompt
 </div>
 <div created="20200217122522367" modified="20200217122522367" title="$:/view">
 <pre>pop</pre>
+</div>
+<div created="20200217123555869" current-tiddler="HelloThere" modified="20200217123557284" title="MySubHistoryList" type="application/json">
+<pre>[
+    {
+        &quot;title&quot;: &quot;HelloThere&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 299.4375,
+            &quot;left&quot;: 569.296875,
+            &quot;width&quot;: 68.484375,
+            &quot;right&quot;: 637.78125,
+            &quot;bottom&quot;: 315.4375,
+            &quot;height&quot;: 16
+        }
+    },
+    {
+        &quot;title&quot;: &quot;HelloThere&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 299.4375,
+            &quot;left&quot;: 569.296875,
+            &quot;width&quot;: 68.484375,
+            &quot;right&quot;: 637.78125,
+            &quot;bottom&quot;: 315.4375,
+            &quot;height&quot;: 16
+        }
+    }
+]</pre>
+</div>
+<div created="20200217123555869" list="HelloThere" modified="20200217123555869" title="MySubStoryList">
+<pre></pre>
+</div>
+<div created="20200217123549704" modified="20200217123602886" tags="" title="New Tiddler">
+<pre>&lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
+
+Click this link to get started: HelloThere
+
+&lt;$list filter=&quot;[list[MySubStoryList]]&quot; history=&quot;MySubHistoryList&quot;&gt;
+&lt;div&gt;
+
+! &lt;$button message=&quot;tm-close-tiddler&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; &lt;$view field=&quot;title&quot;/&gt;
+
+&lt;$transclude/&gt;
+&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;/$navigator&gt;</pre>
 </div>
 <div created="20200217121438036" modified="20200217122020349" tags="" title="regex meta-character">
 <pre>`[]` to enclose char groups
