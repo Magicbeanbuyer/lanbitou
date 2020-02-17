@@ -221,6 +221,8 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>AtTimeZone</li>
+
 <li>CST</li>
 
 <li>MySubHistoryList</li>
@@ -9530,7 +9532,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200217155253804" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200217155123188" list="UTCOffset CST [[regex meta-character]]" modified="20200217155312701" title="$:/StoryList">
+<div created="20200217155123188" list="AtTimeZone UTCOffset CST [[regex meta-character]]" modified="20200217155312701" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9709,6 +9711,18 @@ Error message and password prompt
 <div created="20200217122522367" modified="20200217122522367" title="$:/view">
 <pre>pop</pre>
 </div>
+<div created="20200217164001093" modified="20200217164349091" tags="" title="AtTimeZone">
+<pre>return value of `at time zone` depends on the time zone setting of the database.
+
+E.g.
+
+```
+SELECT TIMESTAMP '2001-02-16 20:38:40' AT TIME ZONE 'America/Denver';
+```
+Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at UTC.
+
+[[https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT]]</pre>
+</div>
 <div created="20200217150541307" modified="20200217162900056" tags="[[time zone]]" title="CST">
 <pre>CST stands for both China Standard Time (UTC +8) and Cuba Standard Time (UTC -5).
 
@@ -9802,13 +9816,16 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 
 `\` to escape meta-characters</pre>
 </div>
-<div created="20200217162904587" modified="20200217163931107" source_url="https://en.wikipedia.org/wiki/ISO_8601#Time_offsets_from_UTC" tags="postgresql [[time zone]]" title="UTCOffset">
+<div created="20200217162904587" modified="20200217163948802" tags="postgresql [[time zone]]" title="UTCOffset">
 <pre>UTC 2020-01-01 00:00:00 == 2020-01-01 01:00:00+01
 
 Trick:
 UTC 2020-01-01 00:00:00 = 2020-01-01 01:00:00 ''-'' 01
 
-In a timestamptz `YYYY-MM-DD HH:MI:SS+TZ`, `YYYY-MM-DD HH:MI:SS` is the local time where the time zone is, `+TZ` designates the time zone.</pre>
+In a timestamptz `YYYY-MM-DD HH:MI:SS+TZ`, `YYYY-MM-DD HH:MI:SS` is the local time where the time zone is, `+TZ` designates the time zone.
+
+
+[[https://en.wikipedia.org/wiki/ISO_8601#Time_offsets_from_UTC]]</pre>
 </div>
 
 </div>
