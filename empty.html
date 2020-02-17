@@ -229,6 +229,8 @@ Error message and password prompt
 
 <li>regex meta-character</li>
 
+<li>UTCOffset</li>
+
 </ul>
 </p>
 
@@ -9528,7 +9530,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200217155253804" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200217155123188" list="CST [[regex meta-character]]" modified="20200217155312701" title="$:/StoryList">
+<div created="20200217155123188" list="UTCOffset CST [[regex meta-character]]" modified="20200217155312701" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9707,8 +9709,10 @@ Error message and password prompt
 <div created="20200217122522367" modified="20200217122522367" title="$:/view">
 <pre>pop</pre>
 </div>
-<div created="20200217150541307" modified="20200217150828634" tags="[[time zone]]" title="CST">
-<pre>CST stands for both China Standard Time (UTC +8) and Cuba Standard Time (UTC -5).</pre>
+<div created="20200217150541307" modified="20200217162900056" tags="[[time zone]]" title="CST">
+<pre>CST stands for both China Standard Time (UTC +8) and Cuba Standard Time (UTC -5).
+
+Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 </div>
 <div created="20200217123555869" current-tiddler="regex meta-character" modified="20200217123705733" title="MySubHistoryList" type="application/json">
 <pre>[
@@ -9797,6 +9801,14 @@ Error message and password prompt
 `?` to match the proceeding char 0 or 1 times
 
 `\` to escape meta-characters</pre>
+</div>
+<div created="20200217162904587" modified="20200217163640955" source_url="https://en.wikipedia.org/wiki/ISO_8601#Time_offsets_from_UTC" tags="" title="UTCOffset">
+<pre>UTC 2020-01-01 00:00:00 == 2020-01-01 01:00:00+01
+
+Trick:
+UTC 2020-01-01 00:00:00 = 2020-01-01 01:00:00 ''-'' 01
+
+In a timestamptz `YYYY-MM-DD HH:MI:SS+TZ`, `YYYY-MM-DD HH:MI:SS` is the local time where the time zone is, `+TZ` designates the time zone.</pre>
 </div>
 
 </div>
