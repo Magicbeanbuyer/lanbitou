@@ -235,6 +235,8 @@ Error message and password prompt
 
 <li>CST</li>
 
+<li>Draft of 'RegexMetacharacter'</li>
+
 <li>MySubHistoryList</li>
 
 <li>MySubStoryList</li>
@@ -9556,7 +9558,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200218211628276" list="AllTiddlers RegexSsnExample RegexMetacharacter" modified="20200218215607759" title="$:/StoryList">
+<div created="20200218211628276" list="AllTiddlers RegexSsnExample [[Draft of 'RegexMetacharacter']]" modified="20200218215607759" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9756,6 +9758,63 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 <pre>CST stands for both China Standard Time (UTC +8) and Cuba Standard Time (UTC -5).
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
+</div>
+<div created="20200217121438036" draft.of="RegexMetacharacter" draft.title="RegexMetacharacter" modified="20200218223319232" tags="python regex" title="Draft of 'RegexMetacharacter'">
+<pre>! CharacterClasses
+`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
+
+`.` to match all char but a newline char 
+
+! [[Anchors]]
+`^` right ''after'' `[` to exclude, or to match patterns at the beginning of each newline
+
+`$` right ''before'' `]` to match patterns at the end of each newline
+
+! EscapedCharacters
+`\` to escape meta-characters
+
+`r&quot;\d&quot;` matches a raw string of ''\'' and ''d'', instead of character class ''digits''
+
+! [[Quantifiers]]
+
+`*` to match the proceeding char 0 or more times
+
+`+` to match the proceeding char one or more times
+
+`?` to match the proceeding char 0 or 1 times
+
+`{x,y}` to match the proceeding char x to y times
+
+`|` or
+
+! [[Groups]]
+`()` to group chars together as if they are one char
+
+! LookAound
+
+![[Substitution]]
+
+! [[Flags]]
+
+&lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
+
+Click this for an example: RegexSsnExample
+
+&lt;$list filter=&quot;[list[MySubStoryList]]&quot; history=&quot;MySubHistoryList&quot;&gt;
+&lt;div&gt;
+
+! &lt;$button message=&quot;tm-close-tiddler&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; &lt;$view field=&quot;title&quot;/&gt;
+
+&lt;$transclude/&gt;
+
+&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;/$navigator&gt;
+-------
+* https://docs.python.org/3/howto/regex.html#simple-patterns
+* https://regexr.com/
+</pre>
 </div>
 <div created="20200218211129964" current-tiddler="RegexSsnExample" modified="20200218215603511" title="MySubHistoryList" type="application/json">
 <pre>[
