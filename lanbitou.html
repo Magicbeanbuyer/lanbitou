@@ -141,6 +141,8 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/config/TextEditor/EditorHeight/Mode</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/clone</li>
@@ -199,6 +201,8 @@ Error message and password prompt
 
 <li>$:/state/ShowPaletteEditor</li>
 
+<li>$:/state/sidebar</li>
+
 <li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -229,7 +233,7 @@ Error message and password prompt
 
 <li>MySubStoryList</li>
 
-<li>regex meta-character</li>
+<li>regexMetacharacter</li>
 
 <li>UTCOffset</li>
 
@@ -243,6 +247,9 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200218203940321" modified="20200218203940321" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
+</div>
 <div created="20200217121906315" modified="20200217121906315" title="$:/config/TextEditor/EditorHeight/Mode">
 <pre>fixed</pre>
 </div>
@@ -9481,8 +9488,8 @@ Error message and password prompt
 <div created="20200217122740630" modified="20200217123107616" title="$:/DefaultTiddlers">
 <pre>[[regex meta-character]]</pre>
 </div>
-<div created="20200217094843177" modified="20200217094850231" title="$:/GitHub/Filename">
-<pre>empty.html</pre>
+<div created="20200217094843177" modified="20200218204113854" title="$:/GitHub/Filename">
+<pre>lanbitou.html</pre>
 </div>
 <div created="20200217094838676" modified="20200217095009878" title="$:/GitHub/Path">
 <pre>./</pre>
@@ -9520,11 +9527,14 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
+<div created="20200218203346426" modified="20200218203850897" title="$:/state/sidebar">
+<pre>yes</pre>
+</div>
 <div created="20200217122416135" modified="20200217155255796" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20200217094632788" modified="20200217155325132" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20200217094632788" modified="20200218204059824" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20200217094634145" modified="20200217094634840" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -9532,7 +9542,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200217155253804" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200217155123188" list="AtTimeZone UTCOffset CST [[regex meta-character]]" modified="20200217155312701" title="$:/StoryList">
+<div created="20200218204035507" list="$:/ControlPanel regexMetacharacter" modified="20200218204035507" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9548,7 +9558,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///home/xiatong/Documents/lanbitou/lanbitou.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Vanessa/Documents/lanbitou/lanbitou.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9568,7 +9578,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/home/xiatong/Documents/lanbitou/lanbitou.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/Vanessa/Documents/lanbitou/lanbitou.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9580,21 +9590,21 @@ Error message and password prompt
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;2048&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;1152&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-US&quot;
+            &quot;text&quot;: &quot;en-DE&quot;
         }
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200217150849322" title="$:/temp/search">
-<pre></pre>
+<div created="20200217122749046" modified="20200218203855818" title="$:/temp/search">
+<pre>reg</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9800,10 +9810,10 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
     }
 ]</pre>
 </div>
-<div created="20200217123555869" list="[[regex meta-character]] HelloThere" modified="20200217123705733" title="MySubStoryList">
+<div created="20200217123555869" list="regexMetacharacter HelloThere" modified="20200218203941619" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200217121438036" modified="20200217162816417" tags="python regex" title="regex meta-character">
+<div created="20200217121438036" modified="20200218203941618" tags="python regex" title="regexMetacharacter">
 <pre>`[]` to enclose char groups
 
 `^` to exclude, or to match patterns at the beginning of each newline
@@ -9816,7 +9826,11 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 
 `?` to match the proceeding char 0 or 1 times
 
-`\` to escape meta-characters</pre>
+`\` to escape meta-characters
+
+`{x,y}` to specify a range of times that the preceeding char shall repeat
+
+`()` to group chars together as if they are one char</pre>
 </div>
 <div created="20200217162904587" modified="20200217164504901" tags="postgresql [[time zone]]" title="UTCOffset">
 <pre>UTC 2020-01-01 00:00:00 == 2020-01-01 01:00:00+01
