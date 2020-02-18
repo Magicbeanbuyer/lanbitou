@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/config/RelinkOnRename</li>
 
+<li>$:/config/TextEditor/EditorHeight/Height</li>
+
 <li>$:/config/TextEditor/EditorHeight/Mode</li>
 
 <li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/clone</li>
@@ -249,6 +251,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20200218203940321" modified="20200218203940321" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20200218204720437" modified="20200218204722498" title="$:/config/TextEditor/EditorHeight/Height">
+<pre>1000px</pre>
 </div>
 <div created="20200217121906315" modified="20200217121906315" title="$:/config/TextEditor/EditorHeight/Mode">
 <pre>fixed</pre>
@@ -9521,14 +9526,14 @@ Error message and password prompt
 <div created="20200217122821168" modified="20200217123138515" title="$:/state/folded/regex meta-character">
 <pre>show</pre>
 </div>
-<div created="20200217121859322" modified="20200217121859322" title="$:/state/showeditpreview">
+<div created="20200217121859322" modified="20200218204710076" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200218203850897" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200218203346426" modified="20200218204711826" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200217122416135" modified="20200217155255796" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
@@ -9542,7 +9547,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200217155253804" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200218204213891" list="$:/ControlPanel [[regex meta-character]]" modified="20200218204213891" title="$:/StoryList">
+<div created="20200218204702411" list="regexMetacharacter" modified="20200218204702412" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9740,7 +9745,7 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 </div>
-<div created="20200217123555869" current-tiddler="regex meta-character" modified="20200217123705733" title="MySubHistoryList" type="application/json">
+<div created="20200217123555869" current-tiddler="HelloThere" modified="20200218204746122" title="MySubHistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;HelloThere&quot;,
@@ -9807,13 +9812,24 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
             &quot;bottom&quot;: 166.8125,
             &quot;height&quot;: 17
         }
+    },
+    {
+        &quot;title&quot;: &quot;HelloThere&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 432.70001220703125,
+            &quot;left&quot;: 690.4000244140625,
+            &quot;width&quot;: 68.45000457763672,
+            &quot;right&quot;: 758.8500289916992,
+            &quot;bottom&quot;: 451.1000118255615,
+            &quot;height&quot;: 18.399999618530273
+        }
     }
 ]</pre>
 </div>
-<div created="20200217123555869" list="regexMetacharacter HelloThere" modified="20200218203941619" title="MySubStoryList">
+<div created="20200217123555869" list="" modified="20200218204746122" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200217121438036" modified="20200218203941618" tags="python regex" title="regexMetacharacter">
+<div created="20200217121438036" modified="20200218204920834" tags="python regex" title="regexMetacharacter">
 <pre>`[]` to enclose char groups
 
 `^` to exclude, or to match patterns at the beginning of each newline
@@ -9830,7 +9846,24 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 
 `{x,y}` to specify a range of times that the preceeding char shall repeat
 
-`()` to group chars together as if they are one char</pre>
+`()` to group chars together as if they are one char
+
+
+&lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
+
+Click this link to get started: regexSsnExample
+
+&lt;$list filter=&quot;[list[MySubStoryList]]&quot; history=&quot;MySubHistoryList&quot;&gt;
+&lt;div&gt;
+
+! &lt;$button message=&quot;tm-close-tiddler&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; &lt;$view field=&quot;title&quot;/&gt;
+
+&lt;$transclude/&gt;
+
+&lt;/div&gt;
+&lt;/$list&gt;
+
+&lt;/$navigator&gt;</pre>
 </div>
 <div created="20200217162904587" modified="20200217164504901" tags="postgresql [[time zone]]" title="UTCOffset">
 <pre>UTC 2020-01-01 00:00:00 == 2020-01-01 01:00:00+01
