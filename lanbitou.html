@@ -9556,7 +9556,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200218211628276" list="$:/ControlPanel AllTiddlers RegexMetacharacter" modified="20200218213156589" title="$:/StoryList">
+<div created="20200218211628276" list="$:/ControlPanel AllTiddlers RegexSsnExample RegexMetacharacter" modified="20200218215607759" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9757,7 +9757,7 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 </div>
-<div created="20200218211129964" current-tiddler="RegexSsnExample" modified="20200218215229424" title="MySubHistoryList" type="application/json">
+<div created="20200218211129964" current-tiddler="RegexSsnExample" modified="20200218215603511" title="MySubHistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;RegexSsnExample&quot;,
@@ -9780,13 +9780,24 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
             &quot;bottom&quot;: 720.3500118255615,
             &quot;height&quot;: 18.399999618530273
         }
+    },
+    {
+        &quot;title&quot;: &quot;RegexSsnExample&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 871.5499877929688,
+            &quot;left&quot;: 395,
+            &quot;width&quot;: 114,
+            &quot;right&quot;: 509,
+            &quot;bottom&quot;: 889.949987411499,
+            &quot;height&quot;: 18.399999618530273
+        }
     }
 ]</pre>
 </div>
-<div created="20200218211129963" list="RegexSsnExample" modified="20200218215229423" title="MySubStoryList">
+<div created="20200218211129963" list="RegexSsnExample" modified="20200218215603511" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200217121438036" modified="20200218215550735" tags="python regex" title="RegexMetacharacter">
+<div created="20200217121438036" modified="20200218215651879" tags="python regex" title="RegexMetacharacter">
 <pre>`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
 
 `^` right ''after'' `[` to exclude, or to match patterns at the beginning of each newline
@@ -9825,10 +9836,10 @@ Click this for an example: RegexSsnExample
 
 &lt;/$navigator&gt;</pre>
 </div>
-<div created="20200218204949765" modified="20200218205401434" tags="regex" title="RegexSsnExample">
+<div created="20200218204949765" modified="20200218215643263" tags="regex" title="RegexSsnExample">
 <pre>American SSN format 999-99-999
 
-`^\d{3}-\d{2}-\d{4}`</pre>
+`[^\d{3}-\d{2}-\d{4}$]`</pre>
 </div>
 <div created="20200217162904587" modified="20200217164504901" tags="postgresql [[time zone]]" title="UTCOffset">
 <pre>UTC 2020-01-01 00:00:00 == 2020-01-01 01:00:00+01
