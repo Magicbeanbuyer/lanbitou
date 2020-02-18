@@ -9757,7 +9757,7 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 </div>
-<div created="20200218211129964" current-tiddler="RegexSsnExample" modified="20200218211129964" title="MySubHistoryList" type="application/json">
+<div created="20200218211129964" current-tiddler="RegexSsnExample" modified="20200218215229424" title="MySubHistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;RegexSsnExample&quot;,
@@ -9769,31 +9769,45 @@ Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
             &quot;bottom&quot;: 866.9500122070312,
             &quot;height&quot;: 20
         }
+    },
+    {
+        &quot;title&quot;: &quot;RegexSsnExample&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 701.9500122070312,
+            &quot;left&quot;: 395,
+            &quot;width&quot;: 114,
+            &quot;right&quot;: 509,
+            &quot;bottom&quot;: 720.3500118255615,
+            &quot;height&quot;: 18.399999618530273
+        }
     }
 ]</pre>
 </div>
-<div created="20200218211129963" list="" modified="20200218211129963" title="MySubStoryList">
+<div created="20200218211129963" list="RegexSsnExample" modified="20200218215229423" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200217121438036" modified="20200218213410382" source="https://docs.python.org/3/howto/regex.html#simple-patterns" tags="python regex" title="RegexMetacharacter">
+<div created="20200217121438036" modified="20200218215550735" tags="python regex" title="RegexMetacharacter">
 <pre>`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
 
-`^` to exclude, or to match patterns at the beginning of each newline
+`^` right ''after'' `[` to exclude, or to match patterns at the beginning of each newline
 
-`$` to match patterns at the end of each newline
+`$` right ''before'' `]` to match patterns at the end of each newline
 
-`.` to match char but a newline
-
-`*` to match the proceeding char 0 or more times
-
-`?` to match the proceeding char 0 or 1 times
+`.` to match all char but a newline char 
 
 `\` to escape meta-characters
 
-`{x,y}` to specify a range of times that the preceeding char shall repeat
+`*` to match the proceeding char 0 or more times
+
+`+` to match the proceeding char one or more times
+
+`?` to match the proceeding char 0 or 1 times
+
+`{x,y}` to match the proceeding char x to y times
 
 `()` to group chars together as if they are one char
 
+https://docs.python.org/3/howto/regex.html#simple-patterns
 
 &lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
 
