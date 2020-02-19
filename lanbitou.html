@@ -141,6 +141,10 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
 <li>$:/config/RelinkOnRename</li>
 
 <li>$:/config/TextEditor/EditorHeight/Height</li>
@@ -235,15 +239,13 @@ Error message and password prompt
 
 <li>CST</li>
 
-<li>Draft of 'RegexMetacharacter'</li>
-
 <li>Grep</li>
 
 <li>MySubHistoryList</li>
 
 <li>MySubStoryList</li>
 
-<li>RegexMetacharacter</li>
+<li>Regex</li>
 
 <li>RegexSsnExample</li>
 
@@ -259,6 +261,12 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20200219131110244" modified="20200219131110244" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/close-all">
+<pre>show</pre>
+</div>
+<div created="20200219131115708" modified="20200219131115708" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>show</pre>
+</div>
 <div created="20200218203940321" modified="20200218203940321" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
 </div>
@@ -9554,13 +9562,13 @@ Error message and password prompt
 <div created="20200217094634145" modified="20200217094634840" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200218211117828" modified="20200218211341763" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20200218211117828" modified="20200219131117204" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200219130504385" list="Grep RegexMetacharacter AllTiddlers" modified="20200219130504385" title="$:/StoryList">
+<div created="20200219131302229" list="AllTiddlers Regex" modified="20200219131302229" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9761,63 +9769,6 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
 </div>
-<div created="20200217121438036" draft.of="RegexMetacharacter" draft.title="RegexMetacharacter" modified="20200218223319232" tags="python regex" title="Draft of 'RegexMetacharacter'">
-<pre>! CharacterClasses
-`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
-
-`.` to match all char but a newline char 
-
-! [[Anchors]]
-`^` right ''after'' `[` to exclude, or to match patterns at the beginning of each newline
-
-`$` right ''before'' `]` to match patterns at the end of each newline
-
-! EscapedCharacters
-`\` to escape meta-characters
-
-`r&quot;\d&quot;` matches a raw string of ''\'' and ''d'', instead of character class ''digits''
-
-! [[Quantifiers]]
-
-`*` to match the proceeding char 0 or more times
-
-`+` to match the proceeding char one or more times
-
-`?` to match the proceeding char 0 or 1 times
-
-`{x,y}` to match the proceeding char x to y times
-
-`|` or
-
-! [[Groups]]
-`()` to group chars together as if they are one char
-
-! LookAound
-
-![[Substitution]]
-
-! [[Flags]]
-
-&lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
-
-Click this for an example: RegexSsnExample
-
-&lt;$list filter=&quot;[list[MySubStoryList]]&quot; history=&quot;MySubHistoryList&quot;&gt;
-&lt;div&gt;
-
-! &lt;$button message=&quot;tm-close-tiddler&quot; class=&quot;tc-btn-invisible&quot;&gt;{{$:/core/images/close-button}}&lt;/$button&gt; &lt;$view field=&quot;title&quot;/&gt;
-
-&lt;$transclude/&gt;
-
-&lt;/div&gt;
-&lt;/$list&gt;
-
-&lt;/$navigator&gt;
--------
-* https://docs.python.org/3/howto/regex.html#simple-patterns
-* https://regexr.com/
-</pre>
-</div>
 <div created="20200219130213160" modified="20200219131010781" tags="regex commandLine ubuntu" title="Grep">
 <pre>a command-line tool used to search for strings in file contents, it can be used with RegexMetacharacter
 
@@ -9877,18 +9828,23 @@ search current directory and its sub-directories
 <div created="20200218211129963" list="" modified="20200218215603511" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200217121438036" modified="20200218220325713" tags="python regex" title="RegexMetacharacter">
-<pre>`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
+<div created="20200217121438036" modified="20200219131315526" tags="python regex" title="Regex">
+<pre>! CharacterClasses
+`[]` to enclose char class, metacharacter inside `[]` loses its special nature and becomes just another char.
 
+`.` to match all char but a newline char 
+
+! [[Anchors]]
 `^` right ''after'' `[` to exclude, or to match patterns at the beginning of each newline
 
 `$` right ''before'' `]` to match patterns at the end of each newline
 
-`.` to match all char but a newline char 
-
-`|` or
-
+! EscapedCharacters
 `\` to escape meta-characters
+
+`r&quot;\d&quot;` matches a raw string of ''\'' and ''d'', instead of character class ''digits''
+
+! [[Quantifiers]]
 
 `*` to match the proceeding char 0 or more times
 
@@ -9898,9 +9854,16 @@ search current directory and its sub-directories
 
 `{x,y}` to match the proceeding char x to y times
 
+`|` or
+
+! [[Groups]]
 `()` to group chars together as if they are one char
 
-https://docs.python.org/3/howto/regex.html#simple-patterns
+! LookAound
+
+![[Substitution]]
+
+! [[Flags]]
 
 &lt;$navigator story=&quot;MySubStoryList&quot; history=&quot;MySubHistoryList&quot;&gt;
 
@@ -9916,7 +9879,11 @@ Click this for an example: RegexSsnExample
 &lt;/div&gt;
 &lt;/$list&gt;
 
-&lt;/$navigator&gt;</pre>
+&lt;/$navigator&gt;
+-------
+* https://docs.python.org/3/howto/regex.html#simple-patterns
+* https://regexr.com/
+</pre>
 </div>
 <div created="20200218204949765" modified="20200218215643263" tags="regex" title="RegexSsnExample">
 <pre>American SSN format 999-99-999
