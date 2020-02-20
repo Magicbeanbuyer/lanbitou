@@ -239,6 +239,8 @@ Error message and password prompt
 
 <li>CsT</li>
 
+<li>Data Jour Fixe</li>
+
 <li>GeneralPublicLicense</li>
 
 <li>Grep</li>
@@ -9576,7 +9578,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200220140552993" list="AllTiddlers UniX PoxiS LinuX" modified="20200220140625553" title="$:/StoryList">
+<div list="[[Data Jour Fixe]] AllTiddlers" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9776,6 +9778,25 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 <pre>CST stands for both China Standard Time (UTC +8) and Cuba Standard Time (UTC -5).
 
 Redshift consider CST as Cuba Standard Time (UTC -5).</pre>
+</div>
+<div created="20200220151556425" modified="20200220151819575" tags="" title="Data Jour Fixe">
+<pre>* wiki uses periscope linked chart 
+
+! Outstanding tasks
+
+//Drag the tasks to re-order them//
+
+&lt;&lt;list-tagged-draggable tag:&quot;task&quot; subFilter:&quot;!has[draft.of]!tag[done]&quot; itemTemplate:&quot;TaskManagementExampleDraggableTemplate&quot; emptyMessage:&quot;You don't have any active tasks&quot;&gt;&gt;
+
+! Completed tasks
+
+//(Listed in reverse order of completion)//
+
+&lt;$list filter=&quot;[!has[draft.of]tag[task]tag[done]sort[created]]&quot;&gt;
+&lt;div&gt;
+&lt;$checkbox tag=&quot;done&quot;&gt; ~~&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;~~&lt;/$checkbox&gt;
+&lt;/div&gt;
+&lt;/$list&gt;</pre>
 </div>
 <div created="20200220135346061" modified="20200220135518830" title="GeneralPublicLicense">
 <pre>Any code uses GPL materials must also be under GPL, a.k.a. free and open-source</pre>
