@@ -277,6 +277,8 @@ Error message and password prompt
 
 <li>DistributedApplication</li>
 
+<li>DocumentModel</li>
+
 <li>DragonTree</li>
 
 <li>EndSystem</li>
@@ -311,7 +313,11 @@ Error message and password prompt
 
 <li>RegexSsnExample</li>
 
+<li>RelationalDatabase</li>
+
 <li>SnippinG</li>
+
+<li>SqL</li>
 
 <li>StreamProcessing</li>
 
@@ -9660,7 +9666,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200227092221258" list="ObjectRelationalMapping NoSql WriteThroughput DataSystem CachE StreamProcessing InterneT CupressusMacrocarpaWilma CrowsFootNotation CanonicalForm ClassificationAndRegressionTree AllTiddlers" modified="20200227130113263" title="$:/StoryList">
+<div created="20200302121731423" list="NoSql SqL DocumentModel SchemaOnRead RelationalDatabase ObjectRelationalMapping DataSystem AllTiddlers" modified="20200302131619323" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9724,8 +9730,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200227092654638" title="$:/temp/search">
-<pre>interne</pre>
+<div created="20200217122749046" modified="20200302132211378" title="$:/temp/search">
+<pre>post</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9965,6 +9971,16 @@ Different systems can be stitched together using code
 
 Eg. spotify, whatsapp</pre>
 </div>
+<div created="20200302121806418" modified="20200302123747604" tags="database [[data engineering]]" title="DocumentModel">
+<pre>MangoDb
+
+vs. RelationalDatabase
+
+* schemaless / SchemaOnRead: no validation on schema either, a record may or may not contain a certain key-value pair
+* locality: all information about one instance is stored in one place, no need for join.
+* can't support many-to-many relation
+* can store heterogeneous data that has different schema / columns / attributes</pre>
+</div>
 <div created="20200223135947550" modified="20200226140955090" tags="plant" title="DragonTree">
 <pre>[img[https://drive.google.com/file/d/1eTGo37k41jOw2IKQQ02dzAn1EqlYHwn7/view?usp=sharing]]
 
@@ -10155,6 +10171,11 @@ Click this for an example: RegexSsnExample
 
 `[^\d{3}-\d{2}-\d{4}$]`</pre>
 </div>
+<div created="20200302123302985" modified="20200302123523484" tags="[[data engineering]] database" title="RelationalDatabase">
+<pre>SchemaOnWrite
+
+Migration: change schema, and move the old data into the new schema</pre>
+</div>
 <div created="20200221140022826" modified="20200221140349377" tags="ubuntu windows shortcut" title="SnippinG">
 <pre>WindowS
 
@@ -10163,6 +10184,17 @@ Home + Shift + S
 UbuntU
 
 Control + Shift + Print</pre>
+</div>
+<div created="20200302131624184" modified="20200302133345266" title="SqL">
+<pre>''declarative query language''
+
+* declare what you need, and database system's query optimizer decide which indexes and join methods to use.
+* let the database implement parallelization
+
+''imperative language'' 
+
+* tells computer step-by-step how to get the data needed.
+* implement parallelization in the code</pre>
 </div>
 <div created="20200227093827272" modified="20200227095110827" tags="[[data engineering]]" title="StreamProcessing">
 <pre>RediS: datastore that is also used as message queue
