@@ -255,6 +255,8 @@ Error message and password prompt
 
 <li>AtTimeZone</li>
 
+<li>BigTable</li>
+
 <li>BranchinG</li>
 
 <li>CachE</li>
@@ -331,7 +333,7 @@ Error message and password prompt
 
 <li>MySubStoryList</li>
 
-<li>NoSql</li>
+<li>NoSQL</li>
 
 <li>ObjectRelationalMapping</li>
 
@@ -361,13 +363,13 @@ Error message and password prompt
 
 <li>StreamProcessing</li>
 
+<li>ThroughPut</li>
+
 <li>UniX</li>
 
 <li>UtcOffset</li>
 
 <li>VritualPrivateCloud</li>
-
-<li>WriteThroughput</li>
 
 </ul>
 </p>
@@ -9711,7 +9713,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div list="CloudStorage AllTiddlers" title="$:/StoryList">
+<div created="20200311135004132" list="ImA ThroughPut NoSQL BigTable CloudStorage AllTiddlers" modified="20200311135719725" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9775,8 +9777,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200311131613758" title="$:/temp/search">
-<pre></pre>
+<div created="20200217122749046" modified="20200311135712861" title="$:/temp/search">
+<pre>ima</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9964,6 +9966,19 @@ Returns `2001-02-17 03:38:40+00` in getsafe database, where time zone is set at 
 [[https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT]]
 
 [[UTCOffset]]</pre>
+</div>
+<div created="20200311134933558" modified="20200311140407646" tags="GCP" title="BigTable">
+<pre>* NoSQL
+* designed for table with a single lookup key
+* high ThroughPut, both write and read
+* through the same ApI as ApacheHBase
+* has ImA control
+* used by google search, map, gmail, analytics etc.
+
+!! I/O
+* a data service layer to read and write data, e.g. managed VM, HBaseRestServer
+* a data streaming service, eg. DataFlow, SparK, StorM
+* or batch process, e.g. HadoopMapReduce, DataFlow, SparK</pre>
 </div>
 <div created="20200224165514163" modified="20200224170343607" tags="[[tree method]] regression" title="BranchinG">
 <pre>Method 1:
@@ -10318,7 +10333,7 @@ The typical APIs such programs have are:
 <div created="20200218211129963" list="" modified="20200218215603511" title="MySubStoryList">
 <pre></pre>
 </div>
-<div created="20200227125234554" modified="20200227130111768" tags="[[data engineering]]" title="NoSql">
+<div created="20200227125234554" modified="20200311135011476" tags="[[data engineering]]" title="NoSQL">
 <pre>Not only SqL
 
 - store large dataset
@@ -10475,6 +10490,12 @@ a cursor tracks the current state of a database, and can be used to issue comman
 
 Kafka: message queue that is database-like, because they guarantee the preservation of data for a certain period</pre>
 </div>
+<div created="20200227125553923" modified="20200311135350532" tags="IO" title="ThroughPut">
+<pre>! write
+The amount of data that can be written on a stable storage (hard drive) in a given period of time
+
+</pre>
+</div>
 <div created="20200220140130561" modified="20200220140631242" tags="[[Operating System]]" title="UniX">
 <pre>* it is not open source
 * SUS (Single Unix Specification) = PoxiS</pre>
@@ -10493,11 +10514,6 @@ In a timestamptz `YYYY-MM-DD HH:MI:SS+TZ`, `YYYY-MM-DD HH:MI:SS` is the local ti
 </div>
 <div created="20200306204151611" modified="20200306204500124" tags="[[computer networking]] GCP" title="VritualPrivateCloud">
 <pre>* connect GCP recourses to each other and to the internet
-</pre>
-</div>
-<div created="20200227125553923" modified="20200227125644789" tags="IO" title="WriteThroughput">
-<pre>The amount of data that can be written on a stable storage (hard drive) in a given period of time
-
 </pre>
 </div>
 
