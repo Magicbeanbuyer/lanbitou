@@ -271,6 +271,8 @@ Error message and password prompt
 
 <li>CloudShell</li>
 
+<li>CloudStorage</li>
+
 <li>CommonDaisy</li>
 
 <li>ComputeEngine</li>
@@ -9709,7 +9711,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200309090628857" list="DataOrientedArchitecture MonolithicArchitecture ServiceOrientedArchitecture" modified="20200309094202534" title="$:/StoryList">
+<div list="CloudStorage AllTiddlers" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9773,8 +9775,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200309094201401" title="$:/temp/search">
-<pre>new</pre>
+<div created="20200217122749046" modified="20200311131613758" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -10016,6 +10018,28 @@ available as a docker image</pre>
 </div>
 <div created="20200306192853906" modified="20200306193230084" tags="GCP" title="CloudShell">
 <pre>command line in the browser, no need to install CloudSdk</pre>
+</div>
+<div created="20200311131616589" modified="20200311134805725" tags="GCP" title="CloudStorage">
+<pre>Object storage
+
+[img[https://lh3.googleusercontent.com/sZwQdGoGKnRtl2u-8dygXsVfQIwpQlc_1Nckz9_fSUpFUI6sNyPhXf2EANfD3xOVOf3fBmRDv5ZXtgo-VkDzz0JtckTruGBR_McEvXfJifiHG-wBD7KFFvjxxDteIBffMZmRncCHTnZ3Rg306mHKiliKuq0kJ-JODqwA8Dnu_kMGvWXEUU5uk6NpigUwDtQoq-ZpNgedlxUbx1q1Yb7tLNaPcH5wzD7JLqv1mxypW7hstgv-GpYJE3vqSTMkTnzx-b0EKhuS5naBSrrouH8u1MUinHnwOvCE2yXzOiBsXnZ45I-tlk6alelxUgryC6QNh2CbJcNrUEhXB1iTzuXLm8FnDwZ4VUR6MLfe8YUVfTns925N8SKbzhPZ6FFVvkKkKX0zCuw48AnAQ4Mcb6WxX0A82801hAbQWzJCLu_C1ov7V8Xo0cycS8zSdMEy9Vq0f9rK7kYus1Nn9d47Fy1QJ5pP9fKWmxJyK702f3AerGI-pVQcihm6inW-oBVT_mqYBaDoWVa2VNpGb777wTmcg-YcO_hRXHiFjU1BiDP9QoCI6NdY7W8weTYGoGCCAHIrjVuYC4Ejv3GHqvbq6GuUfaON4nfyiPJhiIHQwDWMfcGawBnuAycxvaQC9EP8skGywHq1dkwIFmI_rpNDFjwdoc915qX5S1RNKp8UA-Y_8awMBXOO9z-ZbfKJ65XYKR6IizxrjstWwo6BHN6vcs5yl1hTKDMxbRHL29l3qk0krTflcSti=w1031-h466-no]]
+
+* use buckets to store
+* key: often an url
+* value: bytes to store
+* objects are immutable, edit by create new versions
+* encrypt on server side, and then write to disk
+* IMA is inherited from projects to buckets to objects
+* Access control list (ACL): finer access control to buckets, ACL include a group a users, and what permissions are granted to the users.
+* Life cycle management: e.g. delete versions older than 365 days
+* Storage class: multi-regional &amp; regional for high performance, nearline &amp; coldline for backup
+* data ingestion point &amp; data storage  for GCP 
+
+Moving data to Cloud Storage:
+
+* online storage transfer: from other cloud provider/other cloud region/an HttpS endpoint to Cloud Storage
+* offline transfer appliance
+* tables can be moved from/to BigQuery and CloudSQL</pre>
 </div>
 <div created="20200223142420503" modified="20200223142434885" tags="plant" title="CommonDaisy">
 <pre></pre>
