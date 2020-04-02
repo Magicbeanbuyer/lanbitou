@@ -253,6 +253,8 @@ Error message and password prompt
 
 <li>ApacheBeam</li>
 
+<li>ApacheKafka</li>
+
 <li>AtomicHabits</li>
 
 <li>AtTimeZone</li>
@@ -9700,7 +9702,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200218204943090" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200402143047839" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9721,7 +9723,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200331084251030" list="ApacheBeam AllTiddlers" modified="20200331084251030" title="$:/StoryList">
+<div list="ApacheKafka AllTiddlers" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9785,8 +9787,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200331083815105" title="$:/temp/search">
-<pre></pre>
+<div created="20200217122749046" modified="20200402135731483" title="$:/temp/search">
+<pre>kafka</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9917,6 +9919,35 @@ Tiddlywiki 409 error is resolved by turning off autosaving.</pre>
 PCollection: the data to operate on
 
 </pre>
+</div>
+<div created="20200402135741229" modified="20200402143041620" tags="apache" title="ApacheKafka">
+<pre>! Topic
+* similar to a table 
+* messages in a topic gets deleted after a period
+
+!! partitions
+* a topic has multiple partitions
+* with in a partition, messages are ordered; cross partitions, messages are not ordered
+* ''what messages go to which partition?'' If not specified, messages get sent to random partition
+
+!! offsets
+* id of the messages in a partition of a topic
+* offset only increments 
+
+!! message
+* immutable 
+
+! Broker
+* a broker is a server
+* a kafka cluster has multiple brokers/clusters
+* messages are hosted in brokers
+* a broker host certain partitions
+* bootstrap broker: connect to one broker = connect to the whole cluster
+
+[img[https://lh3.googleusercontent.com/nNjKJxhbYeN_ylQ7GUeH-BD9beZlDVo-yBGrQpRx7gOKlG34Wn6Adv9JMwp8l3Yy2sVsBef6kdxL5RFIPskHY9i6JFwOUS4mnY_LEImDJQkgvNzE38D-VmMxTlmhvUuymoWr2lderuB8ImcD1nA4gHeBY6l5ggFnHqdwjtVYeKHQPLNDkD-ynTpvbq-zdnNLCxoQJdoLJT9e4QrsWMpudxXJhPsxy2J9Uevbwffw_VyOywhVfAuJ08er-4VmrWV2Kx7iaHoWaikA7tVZlqGemNHvCtZQUwwnuRtXVUnffz8GIdRQNiGdE57Q2SY7YQYjFHQdIYgFeb0pEUmN2zWCUaTKgDvTHFoOEnjJzcyn_Lry1gcnNYrSkZavs9lXBogvmgtNEy0TwJjBhttnn__LIHb_KQDaDkNgJHxgfteweRzILU1x9eWNFXPrF1LGNiPo0TdxGxluJw-N7zeSKekVKuHtrdnoqPZ4UdBk6gM6NamoNfb-plcXPp1BTkgEEnry7DZwssqE98quQcOKPmai8OGDX5emOB239k8DbQ9dfEvyo54zpSIdRv4Sdgf5H1YcPLP4bIa97vG4geH4foDLCnur89rc-ki4aqLT-7QeIGwUQfRUkcxgjKFQFDJE6nfCH8sPqAJaZysI9MTH5nbmB_nPmQO3Uzhe3U5DP45x8tIRfzVv73OVEObXPPVc1itum6SQ7kRgMDR33L6rWOfx-TTsZvuB3mXllgHNczDOmorqGptV8K3BG1I=w532-h294-no]]
+
+* topic partition replica
+* a partition has only one leader broker, for receiving and serving data, other replica just sync data, ISR (in-sync replica)</pre>
 </div>
 <div created="20200308112017625" modified="20200309090650921" tags="self-improvement habit book" title="AtomicHabits" type="">
 <pre>4 step to build a habit:
