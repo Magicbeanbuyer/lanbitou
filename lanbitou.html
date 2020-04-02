@@ -9702,7 +9702,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200402143047839" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200402155137952" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9920,7 +9920,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200402135741229" modified="20200402143041620" tags="apache" title="ApacheKafka">
+<div created="20200402135741229" modified="20200402155136526" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
 * messages in a topic gets deleted after a period
@@ -9947,7 +9947,22 @@ PCollection: the data to operate on
 [img[https://lh3.googleusercontent.com/nNjKJxhbYeN_ylQ7GUeH-BD9beZlDVo-yBGrQpRx7gOKlG34Wn6Adv9JMwp8l3Yy2sVsBef6kdxL5RFIPskHY9i6JFwOUS4mnY_LEImDJQkgvNzE38D-VmMxTlmhvUuymoWr2lderuB8ImcD1nA4gHeBY6l5ggFnHqdwjtVYeKHQPLNDkD-ynTpvbq-zdnNLCxoQJdoLJT9e4QrsWMpudxXJhPsxy2J9Uevbwffw_VyOywhVfAuJ08er-4VmrWV2Kx7iaHoWaikA7tVZlqGemNHvCtZQUwwnuRtXVUnffz8GIdRQNiGdE57Q2SY7YQYjFHQdIYgFeb0pEUmN2zWCUaTKgDvTHFoOEnjJzcyn_Lry1gcnNYrSkZavs9lXBogvmgtNEy0TwJjBhttnn__LIHb_KQDaDkNgJHxgfteweRzILU1x9eWNFXPrF1LGNiPo0TdxGxluJw-N7zeSKekVKuHtrdnoqPZ4UdBk6gM6NamoNfb-plcXPp1BTkgEEnry7DZwssqE98quQcOKPmai8OGDX5emOB239k8DbQ9dfEvyo54zpSIdRv4Sdgf5H1YcPLP4bIa97vG4geH4foDLCnur89rc-ki4aqLT-7QeIGwUQfRUkcxgjKFQFDJE6nfCH8sPqAJaZysI9MTH5nbmB_nPmQO3Uzhe3U5DP45x8tIRfzVv73OVEObXPPVc1itum6SQ7kRgMDR33L6rWOfx-TTsZvuB3mXllgHNczDOmorqGptV8K3BG1I=w532-h294-no]]
 
 * topic partition replica
-* a partition has only one leader broker, for receiving and serving data, other replica just sync data, ISR (in-sync replica)</pre>
+* a partition has only one leader broker, for receiving and serving data, other replica just sync data, ISR (in-sync replica)
+[img[https://lh3.googleusercontent.com/VudpR9k3CPflBjkFT5lcMqTJ97Q3aEbrqZ7X1H1fI3Lvq45Akdlb3up_IK1ilsY9CKsTV4-3R7LFB900Qv8m5AFXM7wgZyX9QOrLFDWtIKkCiZtDa9zWu13nva7yAx0dILjZOX2aD_LskDTn1AWScJi-83XkhBg_u6UBvtJbhUdCnyHZ9Qa0EnKIiedWVf9zGZPMECvIwQZzShhyjt5Vodwrl_KyM0Xood9L8Z_uY8QR3S0EbuCFZnbYkx-EIcUCF51NukxvphvNSkWmR0u2Jre4Gc5SFBd_l5IajnhzeOM87OlQWRhuvCP0uVboYNlgjyvgZBaJXIubikE8MEMRyU9yJFiUjfVL3zb6XfcS1P_SqvTlUXL459FyS19C1AVJzGFhow7YSFw2Dy0_hTZWuhecg7_qZIMnJIaXalXAVGEn1oehio6U1BURS-5tPGc9wHFxGaSdvL1Qur8o2ZItbxbsHgwEiy2DIKNvAnvrQlQ04l-vuNvy07hFduSvkxRMfdOzj2qPjd-frynfUP75MEKudySQy2Yjz33cpbSlnPRhoCoEorpfu_6xGbTLvSvSElF6zc-V3oGEQU7FBUCDR0EvwZEAIntEvX1YGULSAD3g1QREkluA9riVjLqpV1TRZ46hAvlSerqmAWMAZjMXWisRx9GZvjS80gcpf5xtDOvDZlUCKqjBMg6dV2vltCCstNNBkuNZ4sKsZrKY8BfZ80HO7NpNqaYuSOBgIJuEwsIG1hbseVQzbds=w1272-h368-no]]
+
+* zookeeper decides leader and ISR
+* when a leader goes down, there will be an election, and after the leader is back, leader first sy
+
+
+
+
+
+
+
+
+
+
+</pre>
 </div>
 <div created="20200308112017625" modified="20200309090650921" tags="self-improvement habit book" title="AtomicHabits" type="">
 <pre>4 step to build a habit:
