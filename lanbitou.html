@@ -9704,7 +9704,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200403081839885" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200403083744667" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9922,7 +9922,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200402135741229" modified="20200403081838848" tags="apache" title="ApacheKafka">
+<div created="20200402135741229" modified="20200403083741781" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
 * messages in a topic gets deleted after a period
@@ -9977,12 +9977,21 @@ PCollection: the data to operate on
 
 !! Consumer Offset
 * bookmark
+* stored in topics
 
 !! message delivery semantics
 * at most once: data loss
 * at least once: duplicates
 * exactly once: idempotent consumer
 
+! Zookeeper
+* a cluster of servers
+* manager brokers
+* leader election
+* operate with odd number of servers
+* leader writes and followers read
+* a kafka cluster is connected to a zookeeper cluster
+[img[https://lh3.googleusercontent.com/r9R4bv3h4wvlsim5y_fokz96nwQkrNxgO59-55wI3IanaunOZdqtDs4b5bgu-5vIUyl5cMVinlOcQzbuz6q6_K-5p8srFI9BRDL3v-GOFWoLgIvoI4p7joqxLP49l8cStppd7NtgZ1PgSVOfa2NyzXBxOUA1BeXUntg__NGMBtPfZ3IiyGzsHCcxXLhjW_fvzBMMn9OknVEduBiuklGarODAypok1DFyQ01Tvsfhc_OIolSBFSc1oBdLebnfV8kVeZ_XMxZvpjXj-FgNu8Vp_2A8_gP2HFGCdaH_nkwAbaoQFvI-g6drOPp7xtJvpsbz6ToFTr_4p9LfRKzF33lWUWhcD6PRPog5Vs_MFuw8gRpMnWjcSDkaZDs3fbIAXmWkgwzJ44HEptht_5-5Gg79-G2mjyh0ok3IQFZZJLC6pj5YV2AetHrVsANN0EXYD43yT8W9S2ZvpDabNiYfRq6Vh83KTLgxDCTPhwNZmL4hPIQ66RwaKvdrAT7_zGl2E_VQwk2kxUjC19bEHWvKFsGBtXg7IvApnx3EEE_yuXpf2S-7qmU-pNurbq0w0PGx9iTB9c7XucOKUNY1GuehQKo7nHlMFp17MXg5TdLjxs0pBTcoC4ZtUpNIV43mb4po9ExMbhPS5pujiYS6sOnrDekIGFQLnpbWm2PuvSqHiUs9ar36r3M93VzdzhnJkM5m5C6EgFYBwbiPbzrG1wLeZEv-83o0zzl1awp4ICv7I6Jy2Xuc0JV3shqs7zk=w776-h258-no]]
 
 
 
