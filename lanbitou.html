@@ -255,8 +255,6 @@ Error message and password prompt
 
 <li>ApacheKafka</li>
 
-<li>ApacheKafkaCLI</li>
-
 <li>AtomicHabits</li>
 
 <li>AtTimeZone</li>
@@ -9706,7 +9704,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200403143844111" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200403083744667" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9727,7 +9725,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200403133013951" list="ApacheKafkaCLI" modified="20200403133013951" title="$:/StoryList">
+<div created="20200403154302577" list="ApacheKafka AllTiddlers" modified="20200403154302577" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9924,7 +9922,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200402135741229" modified="20200403133202033" tags="apache" title="ApacheKafka">
+<div created="20200402135741229" modified="20200403083741781" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
 * messages in a topic gets deleted after a period
@@ -9980,7 +9978,6 @@ PCollection: the data to operate on
 !! Consumer Offset
 * bookmark
 * stored in topics
-* offset is at group level, i.e. if a consumer in a group has consumed a message, other consumer from the same group will not get the message at a later point
 
 !! message delivery semantics
 * at most once: data loss
@@ -10001,38 +9998,6 @@ PCollection: the data to operate on
 
 
 
-</pre>
-</div>
-<div created="20200403140019539" modified="20200403144643124" tags="apache" title="ApacheKafkaCLI">
-<pre>ApacheKafka CLI Commands
-
-1. start zookeeper cluster 
-
-`bin/zookeeper-server-start.sh config/zookeeper.properties`
-
-2. start kafka cluster 
-
-`bin/kafka-server-start.sh config/server.properties`
-
-3. create a topic
-
-`bin/kafka-topics.sh --zookeeper localhost:2181 --topic firstTopic --create --partitions 3 --replication-factor 2`
-
-4. create/launch a producer
-
-`bin/kafka-console-producer.sh --broker-list localhost:9092 --topic firstTopic`
-
-5. create/launch a consumer group
-
-`bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --group  firstConsumerGroup`
-
-5.1 list consumer groups
-
-`bin/kafka-consumer-groups --bootstrap-server localhost:9092 --list`
-
-5.2 reset offsets
-
-`bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --group  firstConsumerGroup --topic firstTopic --reset-offsets --shift-by 2 --execute`
 </pre>
 </div>
 <div created="20200308112017625" modified="20200309090650921" tags="self-improvement habit book" title="AtomicHabits" type="">
