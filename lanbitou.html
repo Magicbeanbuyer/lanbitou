@@ -9704,7 +9704,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200403074624429" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200403081839885" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9725,7 +9725,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200403073046468" list="AllTiddlers ApacheKafka RoundRobin" modified="20200403074114204" title="$:/StoryList">
+<div created="20200403073046468" list="ApacheKafka" modified="20200403074637534" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9922,7 +9922,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200402135741229" modified="20200403074619757" tags="apache" title="ApacheKafka">
+<div created="20200402135741229" modified="20200403081838848" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
 * messages in a topic gets deleted after a period
@@ -9941,10 +9941,10 @@ PCollection: the data to operate on
 
 ! Broker
 * a broker is a server
+* every broker is a bootstrap server
 * a kafka cluster has multiple brokers/clusters
 * messages are hosted in brokers
 * a broker host certain partitions
-* bootstrap broker: connect to one broker = connect to the whole cluster
 
 [img[https://lh3.googleusercontent.com/nNjKJxhbYeN_ylQ7GUeH-BD9beZlDVo-yBGrQpRx7gOKlG34Wn6Adv9JMwp8l3Yy2sVsBef6kdxL5RFIPskHY9i6JFwOUS4mnY_LEImDJQkgvNzE38D-VmMxTlmhvUuymoWr2lderuB8ImcD1nA4gHeBY6l5ggFnHqdwjtVYeKHQPLNDkD-ynTpvbq-zdnNLCxoQJdoLJT9e4QrsWMpudxXJhPsxy2J9Uevbwffw_VyOywhVfAuJ08er-4VmrWV2Kx7iaHoWaikA7tVZlqGemNHvCtZQUwwnuRtXVUnffz8GIdRQNiGdE57Q2SY7YQYjFHQdIYgFeb0pEUmN2zWCUaTKgDvTHFoOEnjJzcyn_Lry1gcnNYrSkZavs9lXBogvmgtNEy0TwJjBhttnn__LIHb_KQDaDkNgJHxgfteweRzILU1x9eWNFXPrF1LGNiPo0TdxGxluJw-N7zeSKekVKuHtrdnoqPZ4UdBk6gM6NamoNfb-plcXPp1BTkgEEnry7DZwssqE98quQcOKPmai8OGDX5emOB239k8DbQ9dfEvyo54zpSIdRv4Sdgf5H1YcPLP4bIa97vG4geH4foDLCnur89rc-ki4aqLT-7QeIGwUQfRUkcxgjKFQFDJE6nfCH8sPqAJaZysI9MTH5nbmB_nPmQO3Uzhe3U5DP45x8tIRfzVv73OVEObXPPVc1itum6SQ7kRgMDR33L6rWOfx-TTsZvuB3mXllgHNczDOmorqGptV8K3BG1I=w532-h294-no]]
 
@@ -9953,7 +9953,11 @@ PCollection: the data to operate on
 [img[https://lh3.googleusercontent.com/VudpR9k3CPflBjkFT5lcMqTJ97Q3aEbrqZ7X1H1fI3Lvq45Akdlb3up_IK1ilsY9CKsTV4-3R7LFB900Qv8m5AFXM7wgZyX9QOrLFDWtIKkCiZtDa9zWu13nva7yAx0dILjZOX2aD_LskDTn1AWScJi-83XkhBg_u6UBvtJbhUdCnyHZ9Qa0EnKIiedWVf9zGZPMECvIwQZzShhyjt5Vodwrl_KyM0Xood9L8Z_uY8QR3S0EbuCFZnbYkx-EIcUCF51NukxvphvNSkWmR0u2Jre4Gc5SFBd_l5IajnhzeOM87OlQWRhuvCP0uVboYNlgjyvgZBaJXIubikE8MEMRyU9yJFiUjfVL3zb6XfcS1P_SqvTlUXL459FyS19C1AVJzGFhow7YSFw2Dy0_hTZWuhecg7_qZIMnJIaXalXAVGEn1oehio6U1BURS-5tPGc9wHFxGaSdvL1Qur8o2ZItbxbsHgwEiy2DIKNvAnvrQlQ04l-vuNvy07hFduSvkxRMfdOzj2qPjd-frynfUP75MEKudySQy2Yjz33cpbSlnPRhoCoEorpfu_6xGbTLvSvSElF6zc-V3oGEQU7FBUCDR0EvwZEAIntEvX1YGULSAD3g1QREkluA9riVjLqpV1TRZ46hAvlSerqmAWMAZjMXWisRx9GZvjS80gcpf5xtDOvDZlUCKqjBMg6dV2vltCCstNNBkuNZ4sKsZrKY8BfZ80HO7NpNqaYuSOBgIJuEwsIG1hbseVQzbds=w1272-h368-no]]
 
 * zookeeper decides leader and ISR
-* when a leader goes down, there will be an election, and after the leader is back, leader first sy
+* when a leader goes down, there will be an election, and after the leader is back, leader first sync data, then claim back leader title
+!! Broker discovery
+* bootstrap broker: connect to one broker = connect to the whole cluster
+* metadata: all brokers, topics and partitions in a Kafka cluster
+[img[https://lh3.googleusercontent.com/FMVmSzatzxz-qGU7TTqhV05WrPwkjKiL_hDyBWKbIhCBCw6-xCgXZIqSqgBdWhSFvE0ZBAk4fpFOLl1jZQktUGs0l8pEBMaZyrudmdV3UtOJIp1QysV6gK3LlP1IBCSW8ggV15WfWT6kz9NOMhjYiyGN-QYDxUoS_To5j8Ai_XFwl3O5IcxTUBgtnOpQy6eP3SVPo0k-_IELg5DQLiuAVO8dH0CQo0GNPgdSFBR6ioo2jeIZN-uZ2rHcsmz1oPDVpywyRf-V7xEtS4nqUhMJqDPODeuIQNqNcR_m6mUPI-d2UgSpJOKpMT8L5zCAPfbH22SRgotWwbK7l3Z6lU6K8w87jCuuZUIQ3knxR5txzs40MXlG2Q3JJJsyih_ImtS4upJtxI-shZLUQpcZzVLbfd0magoAVzL9c6oqQW-IuIyy4jVJrkKWOfLXT_IywsPvvOyIZz-_ma3eShpWY0Ey3t272hG80PSMMDd7dlY_X5f-ebx9xPMytklh4IPE_PqIBsHZ3DMtZtUKyKNC3kYfzSGe2Y_kgQqCYLRdqRf_xl1tEjhkZ7aFOprubFGkZN44R2HiXUqHKMDe3WNjimeSyjmkIXNcjDzNaf1x3RzGjHNqUzpCpKq9R9qeQ_5qW4jjGz0Y6HatDpgzRNFBMWHJV2vExXPdC9_gN7Gk-AiUyY3iU1Y1LFbDday4HSFwY4MbHa5f_PxA4Wlz6MXyA8Qez-wyD1IyRQbC05TgpyqGUufywZeplSGMxjs=w789-h221-no]]
 
 ! Producer
 * responsible for load balancing
@@ -9961,10 +9965,23 @@ PCollection: the data to operate on
 ** acks= 0, don't wait for acknowledgement
 ** acks= 1, wait for leader acknowledgement, asynchronous replication
 ** acks= all, wait for brokers' acknowledgement, synchronous replication
-* key
-** if null, messages are sent RoundRobin
-** if specified, messages with the same id are always sent to the same partition, this guarantees all messages with the same id are ordered
-** key hashing: key to partition hashing
+!! key
+* if null, messages are sent RoundRobin
+* if specified, messages with the same id are always sent to the same partition, this guarantees all messages with the same id are ordered
+* key hashing: key to partition hashing
+
+! Consumer
+* can read data from one or more partitions, data read from multiple partitions are not ordered
+* consumer group
+[img[https://lh3.googleusercontent.com/dNJiODFssp_4vRWc1uPumFg6fCNog5SrUMmWtZVNj8Ja9uZUbPWHts1qjkCdYhNTHQi-FrKuJLGbM1AsuatunVJg6U-cZwyamTzVKHQ6H_QaLvFv7KEKkYQmrY8lYxli_BOqlH4OvVhSJzKOV--v4BJzY5oUCUzDhhfM9PafTegQITLbbIfyN7MdLPtC2p1yejcyboVuqFKCLcFBew0v5o_Tnv-7dOn_cs0cC37EZa058a63nAAo8Ajq_bgkY46ax-HPi_UmOx8vmasUYr-zSJFKAvc8W0LYF5c9HDfguXUfnRoGWRoK4iDobLWx4qaraUYrgczHue1IE8lfif1XnsauF2yudRXNBQQVYr2wH8H8dPJoKzJ7udtTQy_LXAo9WlkxN7JLFJoCXjL__42q48VbZso4tQmOMVY2XP-wq62FvIvN7SSkcquJCUTNBzCvWvhFkn_JCsHbSTm-zBd-HjmzfdZR5eLbfL0hDld-sniV89nJtF5dlO55tk3nJGO8CBg0tQZ_zoIgbaERmHGVO_GdG_kPRTiu5QWGqH0W-0x1juFODF0MK5meWK4rfXCx0N0FMTcSOVcwzaS_Et7yBpWVUrOxvJGf751PkEJ6_bkz2q2fhuUyNmRD_rMFJK3Gr3i0FAkNNFtsZrlf0AWPqbRiMunW1fe7CuPws-q6-NdMYxZnAk8-mA0F0PJJHuR-0GJXhIom8wvOFJwvdUp8TkLmS5YnK5mIO4exzhx-ik_ORzhOh5gz1pw=w458-h220-no]]
+
+!! Consumer Offset
+* bookmark
+
+!! message delivery semantics
+* at most once: data loss
+* at least once: duplicates
+* exactly once: idempotent consumer
 
 
 
