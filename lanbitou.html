@@ -361,6 +361,8 @@ Error message and password prompt
 
 <li>RestfuL</li>
 
+<li>RoundRobin</li>
+
 <li>ServiceOrientedArchitecture</li>
 
 <li>SnippinG</li>
@@ -9702,7 +9704,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200402155137952" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200403074624429" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9723,7 +9725,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div list="ApacheKafka AllTiddlers" title="$:/StoryList">
+<div created="20200403073046468" list="AllTiddlers ApacheKafka RoundRobin" modified="20200403074114204" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9920,7 +9922,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200402135741229" modified="20200402155136526" tags="apache" title="ApacheKafka">
+<div created="20200402135741229" modified="20200403074619757" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
 * messages in a topic gets deleted after a period
@@ -9953,8 +9955,16 @@ PCollection: the data to operate on
 * zookeeper decides leader and ISR
 * when a leader goes down, there will be an election, and after the leader is back, leader first sy
 
-
-
+! Producer
+* responsible for load balancing
+* three mode of acknowledgement of data writes:
+** acks= 0, don't wait for acknowledgement
+** acks= 1, wait for leader acknowledgement, asynchronous replication
+** acks= all, wait for brokers' acknowledgement, synchronous replication
+* key
+** if null, messages are sent RoundRobin
+** if specified, messages with the same id are always sent to the same partition, this guarantees all messages with the same id are ordered
+** key hashing: key to partition hashing
 
 
 
@@ -10517,6 +10527,9 @@ policies are inherited downward, and a more generous policy at a lower level ove
 </div>
 <div created="20200302141539487" modified="20200302170130500" tags="API" title="RestfuL">
 <pre>''stateless'': each request needs auth</pre>
+</div>
+<div created="20200403074125910" modified="20200403074148078" tags="algorithm" title="RoundRobin">
+<pre>an arrangement of choosing all elements in a group equally in some rational order</pre>
 </div>
 <div created="20200309092605525" modified="20200309094242893" tags="[[software design]]" title="ServiceOrientedArchitecture">
 <pre>vs. MonolithicArchitecture
