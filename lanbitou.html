@@ -9708,8 +9708,8 @@ Error message and password prompt
 <div created="20200221140626273" modified="20200221140829416" title="$:/state/image-picker/system-696351646">
 <pre>hide</pre>
 </div>
-<div created="20200217121859322" modified="20200525085142564" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20200217121859322" modified="20200525145937817" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
@@ -10256,9 +10256,25 @@ Different systems can be stitched together using code
 <div created="20200224164436419" modified="20200224165939206" tags="[[tree method]]" title="DecisionTree">
 <pre></pre>
 </div>
-<div created="20200525075054686" modified="20200525085144101" tags="[[data engineering]]" title="DeltaLake">
+<div created="20200525075054686" modified="20200525160835625" tags="[[data engineering]]" title="DeltaLake">
 <pre>Based on ParqueT
-</pre>
+
+!!! delta table
+column oriented 
+
+!!! engine
+separate storage from compute
+
+cache data on compute machine
+
+!!! storage
+S3 etc
+
+!!! Delta architecture design pattern
+raw -&gt; clean -&gt; aggregate 
+
+raw: unstructured
+clean: table-like</pre>
 </div>
 <div created="20200225124040875" modified="20200225124727549" tags="[[computer networking]]" title="DistributedApplication">
 <pre>Applications run on EndSystem
