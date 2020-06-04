@@ -253,6 +253,8 @@ Error message and password prompt
 
 <li>ApacheBeam</li>
 
+<li>ApacheHive</li>
+
 <li>ApacheKafka</li>
 
 <li>ApacheSpark</li>
@@ -331,6 +333,8 @@ Error message and password prompt
 
 <li>GreP</li>
 
+<li>HadooP</li>
+
 <li>HederaWonder</li>
 
 <li>Hyacinth</li>
@@ -369,6 +373,8 @@ Error message and password prompt
 
 <li>PaaS</li>
 
+<li>ParallelComputing</li>
+
 <li>PlanT</li>
 
 <li>PoxiS</li>
@@ -397,7 +403,7 @@ Error message and password prompt
 
 <li>SslTermination</li>
 
-<li>Storage</li>
+<li>StoragE</li>
 
 <li>StreamProcessing</li>
 
@@ -9732,7 +9738,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200403083744667" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200604111805530" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9753,7 +9759,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200604095810711" list="DistributedSystem NetworK Storage MemorY CpU BigData ApacheSpark AllTiddlers" modified="20200604102321965" title="$:/StoryList">
+<div created="20200604095810711" list="ApacheHive HadooP DistributedSystem ParallelComputing NetworK StoragE MemorY CpU BigData ApacheSpark AllTiddlers" modified="20200604104926459" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9817,8 +9823,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200604103457442" title="$:/temp/search">
-<pre>ghz</pre>
+<div created="20200217122749046" modified="20200604110049084" title="$:/temp/search">
+<pre>process</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -9950,6 +9956,10 @@ PCollection: the data to operate on
 
 </pre>
 </div>
+<div created="20200604105501691" modified="20200604105707744" tags="apache [[data engineering]]" title="ApacheHive">
+<pre>* SqL
+* MapReduce</pre>
+</div>
 <div created="20200402135741229" modified="20200403083741781" tags="apache" title="ApacheKafka">
 <pre>! Topic
 * similar to a table 
@@ -10028,13 +10038,31 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200527122328594" modified="20200527123628586" tags="apache [[data engineering]]" title="ApacheSpark">
-<pre>!! Transformation
+<div created="20200527122328594" modified="20200604111820827" tags="apache [[data engineering]]" title="ApacheSpark">
+<pre>* doesn't write intermediately to StoragE
+* DistributedSystem
+* FunctionalProgramming ScalA 
+* [[Java]] [[R]] [[Python]]
+
+!! Modes
+!!! Local Mode
+* single machine
+* not distributed
+
+!!! Maste slave 
+* Cluster manager 
+* a separate monitoring process (MultiProcessing)
+* ApacheSpark standalone
+* when sharing cluster with a team: HadooP YarN or MesoS
+
+!! Transformation
 * lazy evaluation
 * only run when an action is run
 * no output 
 
-!! Action </pre>
+!! Action 
+
+</pre>
 </div>
 <div created="20200308112017625" modified="20200309090650921" tags="self-improvement habit book" title="AtomicHabits" type="">
 <pre>4 step to build a habit:
@@ -10335,10 +10363,13 @@ clean: table-like</pre>
 
 Eg. spotify, whatsapp</pre>
 </div>
-<div created="20200604103142352" modified="20200604103705575" tags="[[Information System]]" title="DistributedSystem">
+<div created="20200604103142352" modified="20200604105011793" tags="[[Information System]]" title="DistributedSystem">
 <pre>* commodity hardware
 * Cluster 
 * connected machines / nodes via NetworK
+* message passing 
+* each node has its own MemorY
+* ParallelComputing shares MemorY
 </pre>
 </div>
 <div created="20200302121806418" modified="20200302123747604" tags="database [[data engineering]]" title="DocumentModel">
@@ -10418,6 +10449,25 @@ grep -r 'foo'
 ```
 search current directory and its sub-directories
 </pre>
+</div>
+<div created="20200604105024268" modified="20200604110234704" tags="[[data engineering]]" title="HadooP">
+<pre>Java framework
+
+!! StoragE
+* HadoopDistributedFileSystem HDFS
+* cluster
+
+!! Programming model
+* data processing
+* MapReduce
+
+!! Resource manager
+* YarN
+* schedule computation tasks
+
+!! Utilities
+* HadoopCommon
+* libraries</pre>
 </div>
 <div created="20200223142215790" modified="20200223142314917" tags="plant" title="HederaWonder">
 <pre></pre>
@@ -10585,6 +10635,9 @@ SqlAlchemy - PythoN</pre>
 <div created="20200306193332868" modified="20200306193337596" tags="GCP" title="PaaS">
 <pre>provide the layer between hardware and application</pre>
 </div>
+<div created="20200604104929824" modified="20200604104937425" title="ParallelComputing">
+<pre>* share MemorY</pre>
+</div>
 <div created="20200223140550745" modified="20200223140638717" tags="list" title="PlanT">
 <pre>&lt;&lt;list-links &quot;[tag[plant]]&quot;&gt;&gt;</pre>
 </div>
@@ -10731,7 +10784,7 @@ a cursor tracks the current state of a database, and can be used to issue comman
 [img[https://avinetworks.com/wp-content/uploads/2018/12/ssl-termination-diagram.png]]
 </pre>
 </div>
-<div created="20200604101722901" modified="20200604103427117" tags="[[Information System]]" title="Storage">
+<div created="20200604101722901" modified="20200604105533864" tags="[[Information System]]" title="StoragE">
 <pre>* long-term storage 
 * vs. MemorY
 * Magnetic Disk or SSD
