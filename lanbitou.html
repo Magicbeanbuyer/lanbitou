@@ -323,7 +323,11 @@ Error message and password prompt
 
 <li>DragonTree</li>
 
+<li>EintryPoint</li>
+
 <li>EndSystem</li>
+
+<li>FunctionalProgramming</li>
 
 <li>GcP</li>
 
@@ -334,6 +338,8 @@ Error message and password prompt
 <li>GreP</li>
 
 <li>HadooP</li>
+
+<li>HadoopDistributedFileSystem</li>
 
 <li>HederaWonder</li>
 
@@ -378,6 +384,8 @@ Error message and password prompt
 <li>PlanT</li>
 
 <li>PoxiS</li>
+
+<li>PySpark</li>
 
 <li>RabbitMQ</li>
 
@@ -9738,7 +9746,7 @@ Error message and password prompt
 <div created="20200217122504319" modified="20200217122504319" title="$:/state/ShowPaletteEditor">
 <pre>yes</pre>
 </div>
-<div created="20200218203346426" modified="20200604111805530" title="$:/state/sidebar">
+<div created="20200218203346426" modified="20200604144546792" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200220152002191" modified="20200220152008439" title="$:/state/tab--1498284803">
@@ -9759,7 +9767,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200604095810711" list="ApacheHive HadooP DistributedSystem ParallelComputing NetworK StoragE MemorY CpU BigData ApacheSpark AllTiddlers" modified="20200604104926459" title="$:/StoryList">
+<div created="20200604095810711" list="ApacheSpark PySpark" modified="20200604122247874" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -10038,7 +10046,7 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200527122328594" modified="20200604111820827" tags="apache [[data engineering]]" title="ApacheSpark">
+<div created="20200527122328594" modified="20200604122245249" tags="apache [[data engineering]]" title="ApacheSpark">
 <pre>* doesn't write intermediately to StoragE
 * DistributedSystem
 * FunctionalProgramming ScalA 
@@ -10062,7 +10070,12 @@ PCollection: the data to operate on
 
 !! Action 
 
-</pre>
+!!  PySpark
+!!! SparkContext
+* main EintryPoint for creating lower level abstraction
+* connect application with the cluster
+!!! SparkSession
+* equivalent of SparkContext for SparkSQL</pre>
 </div>
 <div created="20200308112017625" modified="20200309090650921" tags="self-improvement habit book" title="AtomicHabits" type="">
 <pre>4 step to build a habit:
@@ -10390,8 +10403,18 @@ vs. RelationalDatabase
 * moist compost, tolarate irragular watering
 * wipe the leaves and pull dead leaves</pre>
 </div>
+<div created="20200604114910398" modified="20200604114942160" title="EintryPoint">
+<pre>eg. `airflow webserver`
+
+the first instruction of a program</pre>
+</div>
 <div created="20200225124527869" modified="20200225124610389" tags="[[computer networking]]" title="EndSystem">
 <pre>EndSystem provides InternetSocketInterface</pre>
+</div>
+<div created="20200604112109497" modified="20200604112344161" tags="[[Information System]]" title="FunctionalProgramming">
+<pre>!! Lazy evaluation
+
+</pre>
 </div>
 <div created="20200306192618006" modified="20200311145802728" tags="GCP [[data engineering]]" title="GcP">
 <pre>Interacting with GcP:
@@ -10468,6 +10491,11 @@ search current directory and its sub-directories
 !! Utilities
 * HadoopCommon
 * libraries</pre>
+</div>
+<div created="20200604113736920" modified="20200604113922180" tags="[[data engineering]]" title="HadoopDistributedFileSystem">
+<pre>* HadooP
+* break into 128 MB blocks
+* replicate blocks across the cluster</pre>
 </div>
 <div created="20200223142215790" modified="20200223142314917" tags="plant" title="HederaWonder">
 <pre></pre>
@@ -10646,6 +10674,46 @@ SqlAlchemy - PythoN</pre>
 * to unify different OS, like LinuX and UniX
 * there are PxiS tests to test the compliance with its standards
 * to make sure the same command line commands run in different OS</pre>
+</div>
+<div created="20200604122251632" modified="20200604122838809" tags="python" title="PySpark">
+<pre>ApacheSpark
+
+!! General functions
+similar to methods of pandas dataframes:
+
+select(): returns a new DataFrame with the selected columns
+
+filter(): filters rows using the given condition
+
+where(): is just an alias for filter()
+
+groupBy(): groups the DataFrame using the specified columns, so we can run aggregation on them
+
+sort(): returns a new DataFrame sorted by the specified column(s). By default the second parameter 'ascending' is True.
+
+dropDuplicates(): returns a new DataFrame with unique rows based on all or just a subset of columns
+
+withColumn(): returns a new DataFrame by adding a column or replacing the existing column that has the same name. The first parameter is the name of the new column, the second is an expression of how to compute it.
+
+!! Aggregate functions
+
+Spark SQL provides built-in methods for the most common aggregations such as count(), countDistinct(), avg(), max(), min(), etc. in the pyspark.sql.functions module. 
+
+!!! ways to express the same aggregations
+* chain the aggregate method after a groupBy(). I
+* use different functions on different columns, agg()comes in handy. For example agg({&quot;salary&quot;: &quot;avg&quot;, &quot;age&quot;: &quot;max&quot;}) computes the average salary and maximum age.
+
+!! User defined functions (UDF)
+In Spark SQL we can define our own functions with the udf method from the pyspark.sql.functions module. 
+
+The default type of the returned variable for UDFs is string. 
+
+''If we would like to return an other type we need to explicitly do so by using the different types from the pyspark.sql.types module.''
+
+!! Window functions
+Window functions are a way of combining the values of ranges of rows in a DataFrame. 
+
+When defining the window we can choose how to sort and group (with the partitionBy method) the rows and how wide of a window we'd like to use (described by rangeBetween or rowsBetween).</pre>
 </div>
 <div created="20200522075449038" modified="20200522081350775" tags="airflow" title="RabbitMQ">
 <pre>* communication between services/computers
