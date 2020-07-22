@@ -271,7 +271,7 @@ Error message and password prompt
 
 <li>BranchinG</li>
 
-<li>CachE</li>
+<li>Cache</li>
 
 <li>CanonicalForm</li>
 
@@ -350,6 +350,8 @@ Error message and password prompt
 <li>IaaS</li>
 
 <li>ImA</li>
+
+<li>InMemoryDatabase</li>
 
 <li>InterneT</li>
 
@@ -9782,7 +9784,7 @@ Error message and password prompt
 <div created="20200217155219181" modified="20200218213305197" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div list="AllTiddlers" title="$:/StoryList">
+<div created="20200722094028774" list="Cache InMemoryDatabase" modified="20200722100311269" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200220151959472" modified="20200220151959472" title="$:/temp/advancedsearch">
@@ -9846,8 +9848,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200217122749046" modified="20200721132358719" title="$:/temp/search">
-<pre>master</pre>
+<div created="20200217122749046" modified="20200722094505796" title="$:/temp/search">
+<pre>cache</pre>
 </div>
 <div created="20200217122532231" modified="20200217122537015" title="$:/theme">
 <pre>$:/themes/tiddlywiki/vanilla</pre>
@@ -10061,8 +10063,8 @@ PCollection: the data to operate on
 
 </pre>
 </div>
-<div created="20200527122328594" modified="20200604122245249" tags="apache [[data engineering]]" title="ApacheSpark">
-<pre>* doesn't write intermediately to StoragE
+<div created="20200527122328594" modified="20200722094302325" tags="apache [[data engineering]]" title="ApacheSpark">
+<pre>* doesn't write intermediately to [[Storage]]
 * DistributedSystem
 * FunctionalProgramming ScalA 
 * [[Java]] [[R]] [[Python]]
@@ -10181,8 +10183,23 @@ Each branch should have at least 5% of data.
 
 [[ClassificationAndRegressionTree]]</pre>
 </div>
-<div created="20200227094149555" modified="20200227095119771" tags="[[data engineering]]" title="CachE">
-<pre>MemCached</pre>
+<div created="20200227094149555" modified="20200722114340610" tags="[[Information System]] [[data engineering]]" title="Cache">
+<pre>* high-speed data storage, such as [[Memory]] or [[InMemoryDatabase]]
+* subset of data
+* transient / temporary
+* for repeated requests
+* for read-heavy applications
+* cached info emaples: query results, calculation results, web artifacts like images files, API responses
+* compute intensive workloads: recommendation engine
+* local cache: on users's device
+* in [[DistributedComputing]], a dedicated caching layer/server should be used. If placed on the node of the application, scaling down will affect caching; if placed locally, only one user is benefited.
+* high hit rate -&gt; good cache 
+
+[[AWS Caching Overview|https://aws.amazon.com/caching/]]
+
+MemCached
+
+</pre>
 </div>
 <div created="20200221151443582" modified="20200227092400516" tags="" title="CanonicalForm">
 <pre>Traits
@@ -10344,10 +10361,10 @@ Pro:
 # preferred when a table is populated by different serives.
 </pre>
 </div>
-<div created="20200227093217291" modified="20200227094507778" tags="[[data engineering]]" title="DataSystem">
+<div created="20200227093217291" modified="20200722094111429" tags="[[data engineering]]" title="DataSystem">
 <pre>DatabasE
 
-CachE
+[[Cache]]
 remember the results of expensive operations
 
 SearchIndex: e.g. ElasticSearch
@@ -10366,7 +10383,7 @@ Different systems can be stitched together using code
 <div created="20200224164436419" modified="20200224165939206" tags="[[tree method]]" title="DecisionTree">
 <pre></pre>
 </div>
-<div created="20200525075054686" modified="20200525160835625" tags="[[data engineering]]" title="DeltaLake">
+<div created="20200525075054686" modified="20200722094331215" tags="[[data engineering]]" title="DeltaLake">
 <pre>Based on ParqueT
 
 !!! delta table
@@ -10375,9 +10392,9 @@ column oriented
 !!! engine
 separate storage from compute
 
-cache data on compute machine
+[[Cache]] data on compute machine
 
-!!! storage
+!!! [[Storage]]
 S3 etc
 
 !!! Delta architecture design pattern
@@ -10391,13 +10408,13 @@ clean: table-like</pre>
 
 Eg. spotify, whatsapp</pre>
 </div>
-<div created="20200604103142352" modified="20200604105011793" tags="[[Information System]]" title="DistributedSystem">
+<div created="20200604103142352" modified="20200722094428511" tags="[[Information System]]" title="DistributedSystem">
 <pre>* commodity hardware
 * Cluster 
 * connected machines / nodes via NetworK
 * message passing 
-* each node has its own MemorY
-* ParallelComputing shares MemorY
+* each node has its own [[Memory]]
+* ParallelComputing shares [[Memory]]
 </pre>
 </div>
 <div created="20200302121806418" modified="20200302123747604" tags="database [[data engineering]]" title="DocumentModel">
@@ -10488,10 +10505,10 @@ grep -r 'foo'
 search current directory and its sub-directories
 </pre>
 </div>
-<div created="20200604105024268" modified="20200604110234704" tags="[[data engineering]]" title="HadooP">
+<div created="20200604105024268" modified="20200722094346304" tags="[[data engineering]]" title="HadooP">
 <pre>Java framework
 
-!! StoragE
+!! [[Storage]]
 * HadoopDistributedFileSystem HDFS
 * cluster
 
@@ -10542,18 +10559,21 @@ three type of IaM roles:
 - custom: only applicable at project and org level, not folder level
 </pre>
 </div>
+<div created="20200722100314606" modified="20200722100348286" title="InMemoryDatabase">
+<pre>store data in [[Memory]] instead of [[Storage]]</pre>
+</div>
 <div created="20200224171518573" modified="20200227092704482" tags="" title="InterneT">
 <pre>[img[https://lh3.googleusercontent.com/t4PS2aFg3GWf_vVd3g59n0ngTyg00tMBrKhntNj9U6nhdhrqyJz22fp4bYYxup5fAA5oMhAfcychgK2gMQxYDG_AQgtCGuGJtiWaCa6HozkkZD8WsUPIanuQrGlg1ppfJ9ozUw1zFKQaEiq9VqBijf7Sa9O9-S05g3XeTcVQ8ckmvEC1yzsvtMtlkojoXyKlZJ2yLDfLKUSC0Qhpqq6BbMngnhuWBBeccoHzZ-lLV5Zah1lAPBxfgr8G3mEAKyRXHpDLYluZaa3ULvJgarAc67xkNhoQQDC023xup9o5dHokHGYqb0Lsg5RdpLH4_J5ANyfDsLTdvAbta946mwxy98E5hRgrYJ1DS6AePlSSfalxfNc0OsEIG0KmfCICS8Lh-_I5iqpHljUPJLa13BAFTQ9N8FFH1eKXz6O0jPdu_EzUp_cqqnFv3d_rVCPNwLzvCcaSQcL_8VXt9u9L00MW-s5-UZrSMD0nqln58rfZxN7K0ajlDYKZdAsm16ylnMUdEFaB5syvEIpCmzj7B4oZh6Q-oVnbyvAgMmI3yJz-GFWYY5r72UGob30iOfBrwZ9l_tvjCqCfOL5b1TcYqWT-bViQDdDuFT-Zq7xBQTF3jDqYMixg27SeT5JvVZU1ODQS7JHakAR464Kb4zTkuMXvgfMR1ls86_OWJ17kObZrBdCUDYy2K3XPIwREdvgJgZV_VaspVuiMYPoPuQgBvcF0E2UwRQ3usD7uZALHritFmIBglB5b=w196-h323-no]]</pre>
 </div>
 <div created="20200225124618343" modified="20200225124714221" tags="[[computer networking]]" title="InternetSocketInterface">
 <pre>InternetSocketInterface is a set of rules a DistributedApplication has to follow, in order to send data through the internet.</pre>
 </div>
-<div created="20200220134744423" modified="20200220140611874" tags="[[Operating System]]" title="LinuX">
+<div created="20200220134744423" modified="20200722094214916" tags="[[Operating System]]" title="LinuX">
 <pre>KerneL is the same across all Linux distributions.
 
 * is a software
 * closest layer to hardware
-* translate instructions from app to low-level language that hardware (eg. CPU, RAM) can understand
+* translate instructions from app to low-level language that hardware (eg. [[CPU]], RAM) can understand
 
 GNU GeneralPublicLicense GPL
 </pre>
@@ -10598,8 +10618,8 @@ The typical APIs such programs have are:
 
 </pre>
 </div>
-<div created="20200513062808473" modified="20200513063427324" tags="python" title="MultiProcessing">
-<pre>multiple processes run simultaneously on multiple CPU
+<div created="20200513062808473" modified="20200722094230364" tags="python" title="MultiProcessing">
+<pre>multiple processes run simultaneously on multiple [[CPU]]
 
 [img[https://media.geeksforgeeks.org/wp-content/uploads/20190522151746/Untitled-Diagram-341.png]]
 
@@ -10683,8 +10703,8 @@ SqlAlchemy - PythoN</pre>
 <div created="20200306193332868" modified="20200306193337596" tags="GCP" title="PaaS">
 <pre>provide the layer between hardware and application</pre>
 </div>
-<div created="20200604104929824" modified="20200604104937425" title="ParallelComputing">
-<pre>* share MemorY</pre>
+<div created="20200604104929824" modified="20200722094439662" title="ParallelComputing">
+<pre>* share [[Memory]]</pre>
 </div>
 <div created="20200721132030683" modified="20200721132246110" tags="[[data engineering]] [[Information System]] [[computer science]] [[distributed computing]]" title="PhysicalLogging">
 <pre>log the contents/values of the rows  
