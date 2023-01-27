@@ -1,0 +1,1 @@
+binary distribution is a type of [[built distribution]], it contained complied artifacts.

@@ -1,0 +1,2 @@
+A Python `.whl` file is essentially a ZIP (`.zip`) archive with a specially crafted filename that tells installers what Python versions and platforms the wheel will support.
+A wheel is a type of [[built distribution]].
