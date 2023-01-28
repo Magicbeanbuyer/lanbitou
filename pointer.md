@@ -1,5 +1,7 @@
 #go
 
+[[Go]] pointer holds the memory address of a value.
+
 ```gist
 56e7dd68e5d1d24b550b1c504dfc76ca
 ```

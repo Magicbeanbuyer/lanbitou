@@ -1,5 +1,5 @@
 #python 
-where a variable is stored.
+[[python]] namespace is where a variable is stored.
 
 it is a dictionary
 
