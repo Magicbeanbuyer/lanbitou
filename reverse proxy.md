@@ -1,0 +1,2 @@
+#network 
+In computer networks, a reverse proxy is an application that sits in front of back-end applications and forwards [[client]] [[request]]s to those applications. Reverse proxies help increase scalability, performance, resilience and security.

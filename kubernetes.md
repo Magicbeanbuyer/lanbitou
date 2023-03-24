@@ -1,0 +1,1 @@
+![Kubernetes is the POSIX of the cloud | Robusta](https://global-uploads.webflow.com/633e9bad8f71dfa75ae4c9db/635800c8ea7ac149631e0575_Posix.png)

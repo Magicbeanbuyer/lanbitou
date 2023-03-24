@@ -1,0 +1,1 @@
+The _disk controller_ is the controller circuit which enables the CPU to communicate with a hard disk, floppy disk or other kind of disk drive.

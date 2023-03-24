@@ -1,0 +1,4 @@
+- atomicity: either all operations complete or none  
+- consistency: db statue remain valid after the transaction, all data must fulfill constraints, cascades and triggers.  
+- isolation: concurrent transactions must not affect each other.  
+- durability: successful transactions must be stored in persistent storage
