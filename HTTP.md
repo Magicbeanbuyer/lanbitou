@@ -12,6 +12,7 @@ For example, the browser translated the URL `http://www.test101.com/doc/test.htm
 The request line has the following syntax: `request-method-name request-URI HTTP-version`
 
 ### HTTP server
+See also [[web server]].
 
 In its idling state, an HTTP server does nothing but listening to the IP address(es) and port(s) specified in the configuration for incoming request. 
 

@@ -7,5 +7,14 @@
       "key": "G"
     }
   ],
-  "graph:open": []
+  "graph:open": [],
+  "obsidian-tasks-plugin:edit-task": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "editor:open-link-in-new-leaf": []
 }
