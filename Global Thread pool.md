@@ -1,0 +1,2 @@
+#clickhouse 
+ClickHouse uses threads from the **Global [[thread pool]]** to process queries and also perform background operations like merges and mutations. If there is no idle thread to process a query, then a new thread is created in the pool.

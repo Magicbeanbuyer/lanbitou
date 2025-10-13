@@ -4,31 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "e89084582ffcb6fb",
+        "id": "405d888fc4d052a3",
         "type": "tabs",
         "children": [
           {
-            "id": "f1d50bbd4fd8b18a",
+            "id": "b33e92796e19bd5c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ReplicaSet.md",
+                "file": "compute policy.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "compute policy"
             }
           },
           {
-            "id": "d85eee166f05b959",
+            "id": "063cea96cf1d6e62",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "catalog.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "catalog"
+            }
+          },
+          {
+            "id": "217fb639f1408634",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "access modifier.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "access modifier"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -47,8 +69,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -57,28 +82,32 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "static f",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
-            "id": "4a28179966e0dcab",
+            "id": "18e773e6624f9d88",
             "type": "leaf",
             "state": {
-              "type": "starred",
-              "state": {}
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 492.5
   },
   "right": {
     "id": "7999d2f55bb84fde",
@@ -101,7 +130,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -112,7 +143,9 @@
               "state": {
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -122,8 +155,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -131,19 +168,27 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "access modifier.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of access modifier"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": true,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -152,32 +197,48 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "d85eee166f05b959",
+  "active": "8aebf5737aec2cea",
   "lastOpenFiles": [
-    "cloudflare.md",
-    "protobuf.md",
-    "gRPC.md",
+    "Metastore.md",
+    "serverless budget policy.md",
+    "Databricks tag.md",
+    "databricks compute.md",
+    "attribute-based access control.md",
+    "unity catalog.md",
+    "workspace.md",
+    "volume.md",
+    "storage credential.md",
+    "Schema.md",
+    "Predictive Optimization.md",
+    "managed table.md",
+    "identity management.md",
+    "External table.md",
+    "external location.md",
+    "catalog.md",
+    "💎 list.md",
+    "compute policy.md",
+    "stock keeping unit.md",
+    "Databricks Admin.md",
+    "2025-08-08.md",
+    "FinOp.md",
+    "Pasted image 20250808110421.png",
+    "images/Screenshot 2025-08-08 at 10.58.51.png",
+    "java.md",
+    "ternary operator.md",
+    "final.md",
+    "regex.md",
+    "Pasted image 20250715172043.png",
     "Untitled.canvas",
-    "deployment.md",
-    "ReplicaSet.md",
-    "clickhouse.md",
-    "kubernetes.md",
-    "POSIX.md",
-    "ASCII.md",
-    "pod.md",
-    "Secret.md",
-    "ConfigMap.md",
-    "rune.md",
-    "database transaction.md",
-    "block.md",
-    "MergeTree.md",
-    "part.md",
-    "dbt.md",
-    "WSGI.md",
-    "images/Screenshot 2023-02-14 at 20.41.56.png",
-    "vectorized query execution.md",
-    "shared nothing.md",
-    "2023-02-06.md",
-    "web server.md"
+    "images/Screenshot 2023-06-23 at 10.24.33.png",
+    "databricks",
+    "images/Screenshot 2023-06-23 at 10.29.37.png",
+    "Untitled 3.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "images/query_execution_steps.png",
+    "images/clickhouse_stream_read_1.png",
+    "images/distributed_streaming_processing.png",
+    "images/single_node_streaming_processing.png",
+    "images/Screenshot 2023-02-14 at 20.41.56.png"
   ]
 }

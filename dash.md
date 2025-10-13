@@ -1,0 +1,1 @@
+Whenever an input property changes, the function that the callback decorator wraps will get called automatically. Dash provides this callback function with the new value of the input property as its argument, and Dash updates the property of the output component with whatever was returned by the function.

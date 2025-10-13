@@ -1,0 +1,1 @@
+Some operating systems use an `idle thread` to handle cases in which the `ready queue` would otherwise become empty. Instead of handling those cases individually, the `idle thread` simply gets scheduled.

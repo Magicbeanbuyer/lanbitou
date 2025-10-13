@@ -3,7 +3,6 @@
 - [[vectorized query execution]]
 
 ### part
-
 Each part is one folder
 within each part (a file) data is ordered by order key
 
@@ -14,6 +13,7 @@ The [[database transaction]] unit in [[clickhouse]] is a part,  individual parts
 There is no row level operation, when deleting data, the file has to be deleted and rewritten.
 
 ### column
+
 ![[Screenshot 2023-02-14 at 20.41.56.png]]
 
 Columns are ordered and compressed
@@ -41,7 +41,6 @@ The files consist of compressed blocks. Each block is usually from 64 KB to 1 MB
 
 
 ### primary index
-
 The primary index is created based on the granules. This index is an uncompressed flat array file `primary.idx`, containing so-called numerical index marks starting at 0.
 
 `primary.idx` stores the primary key column values for each first row for each granule. Or in other words: the primary index stores the primary key column values from each 8192nd row of the table.
@@ -97,6 +96,20 @@ change sorting
 Use kafka topic as a logical/external table
 Then a materialized view reads from the topic at intervals and write the data out to clickhouse under the materialized view
 
+### streaming read
+Clickhouse first uses primary index to reduce the number of parts to read.
+
+The parts are separated into data regions, then one thread per data region is reading the granules [[block]]-wise in a streaming fashion.
+
+Then most query processing stages are executed by threads in parallel.
+
+In the end, there might be single threaded processing stages.
+
+![](images/single_node_streaming_processing.png)
+In distributed processing, the local partial results are sent back to the initial node for final processing.
+![](images/distributed_streaming_processing.png)
+
+![](images/query_execution_steps.png)
 ### questions
 A sparse index allows extra data to be read. When reading a single range of the primary key, up to `index_granularity * 2` extra rows in each data block can be read.
 
@@ -105,3 +118,31 @@ For each `INSERT` query, approximately ten entries are added to ZooKeeper thro
 The key for partitioning by month allows reading only those data blocks which contain dates from the proper range. In this case, the data block may contain data for many dates (up to an entire month). Within a block, data is sorted by primary key, which might not contain the date as the first column. Because of this, using a query with only a date condition that does not specify the primary key prefix will cause more data to be read than for a single date.
 
 Usually, compressed blocks are aligned by marks, and the offset in the decompressed block is zero.
+
+## queries
+
+```
+create table dap_test.xiatong_i (  
+    id Int8,  
+    amount Decimal(18,4),  
+    nulllable_amount Nullable(Decimal(18,4))  
+  
+)  
+engine MergeTree  
+order by id;  
+  
+create table dap_test.xiatong_ii (  
+    id Int8,  
+    name String  
+)  
+engine MergeTree  
+order by id;  
+  
+insert into dap_test.xiatong_i values (1,1.2, 1.2), (2, 3.0, null);  
+insert into dap_test.xiatong_ii values (1,'a'), (2, 'b'), (3, 'c');  
+  
+select * from dap_test.xiatong_ii  
+left join dap_test.xiatong_i using(id);
+```
+
+![[Screenshot 2023-06-23 at 10.29.37.png]]
